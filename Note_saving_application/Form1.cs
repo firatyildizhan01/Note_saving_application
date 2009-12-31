@@ -23,5 +23,14 @@ namespace Note_saving_application
             cfg.number = maskedTextBox1.Text;
             cfg.Show();
         }
+
+        private void maskedTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (maskedTextBox1.Text == "1111")
+            {
+                NewTeacherForm cfd = new NewTeacherForm();
+                cfd.Show();
+            }
+        }
     }
 }

@@ -21,5 +21,12 @@ namespace Note_saving_application
         {
 
         }
+
+        private void NewTeacherForm_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'db_note_savingDataSet.TBL_LESSON' table. You can move, or remove it, as needed.
+            this.tBL_LESSONTableAdapter.Fill(this.db_note_savingDataSet.TBL_LESSON);
+
+        }
     }
 }
