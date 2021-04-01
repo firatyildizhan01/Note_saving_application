@@ -20,26 +20,27 @@ namespace Note_saving_application
         public string number;
         //Data Source=FIRAT-PC\SQLEXPRESS;Initial Catalog=Db_note_saving;Integrated Security=True
 
-        SqlConnection baglanti = new SqlConnection(@"Data Source=FIRAT-PC\SQLEXPRESS;Initial Catalog=Db_note_saving;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("@Data Source=FIRAT-PC-SQLEXPRESS;Initial Catalog=Db_note_saving;Integrated Security=True");
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            baglanti.Open();
             lblNumber.Text = number;
-
-            baglanti.Open();        
-            SqlCommand komut = new SqlCommand("Select * From TBL_LESSON where OGRNUMARA=@p1", baglanti);
-            komut.Parameters.AddWithValue("@p1",number);
-            SqlDataReader dr = komut.ExecuteReader();
-            while(dr.Read())
+            SqlCommand komut = new SqlCommand("Select * From where TBL_LESSOn OGRNUMARA = @p1 ", baglanti);
+            komut.Parameters.AddWithValue("@p1", number);
+            SqlDataReader dr = komut.sqlD
+            while(dr.Read)
             {
-                lblAdSoyad.Text = dr[2].ToString() + " " + dr[3].ToString();
-                lblSınav1.Text = dr[4].ToString();
-                lblSınav2.Text = dr[5].ToString();
-                lblSınav3.Text = dr[6].ToString();
-                lblOrtalama.Text = dr[7].ToString();
-                lblDurum.Text = dr[8].ToString();
+                lblNumber.Text = dr[2].ToString + " " + dr[3].ToString;
+                lblSınav1.Text = dr[4].ToString;
+                lblSınav2.Text = dr[5].ToString;
+                lblSınav3.Text = dr[6].ToString;
+                lblOrtalama.Text = dr[7].ToString;
+                lblDurum.Text = dr[8].ToString;
+                
             }
             baglanti.Close();
+           
         }
 
         private void label1_Click(object sender, EventArgs e)
