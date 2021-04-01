@@ -37,7 +37,7 @@ namespace Note_saving_application
                 lblSınav3.Text = dr[6].ToString;
                 lblOrtalama.Text = dr[7].ToString;
                 lblDurum.Text = dr[8].ToString;
-                
+                3
             }
             baglanti.Close();
            
