@@ -31,7 +31,8 @@ namespace Note_saving_application
             komut.Parameters.AddWithValue("@p1",number);
             SqlDataReader dr = komut.ExecuteReader();
             while (dr.Read())
-            {
+            {   
+
                 lblNumber.Text = dr[1].ToString();
                 lblAdSoyad.Text = dr[2].ToString() + " " + dr[3].ToString();
                 lblSınav1.Text = dr[4].ToString();  
